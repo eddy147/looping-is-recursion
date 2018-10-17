@@ -22,32 +22,17 @@
 (defn last-element [a-seq]
   (cond
     (empty? a-seq) nil
-    (= 1 (count a-seq)) (first a-seq)
+    (= 1 (count a-seq)) (get a-seq 0)
     :else (recur (rest a-seq))))
 
-(defn seq= [a-seq b-seq]
-  (cond
-    (and (empty? a-seq) (empty? b-seq)) true
-    (or (empty? a-seq) (empty? b-seq)) false
-    (not= (first a-seq) (first b-seq)) false
-    :else (recur (rest a-seq) (rest b-seq))))
+(defn seq= [seq1 seq2]
+  ":(")
 
 (defn find-first-index [pred a-seq]
-  (loop [s a-seq
-         k 0]
-    (if (empty? s) nil
-        (if (pred (first s))
-          k
-          (recur (rest s) (inc k))))))
+  ":(")
 
 (defn avg [a-seq]
-  (when-not (empty? a-seq)
-    (loop [idx 0
-           sum 0
-           crt-seq a-seq]
-      (cond
-        (empty? crt-seq) (/ sum idx)
-        :else (recur (inc idx) (+ sum (first crt-seq)) (rest crt-seq))))))
+  -1)
 
 (defn parity [a-seq]
   ":(")

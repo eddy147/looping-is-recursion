@@ -1,0 +1,7 @@
+(in-ns 'looping-is-recursion)
+(last-element [1 2 3 4])
+(power 2 3)
+(load "looping_is_recursion.clj")
+(load "src/looping_is_recursion.clj")
+(load "src/looping_is_recursion")
+(load "looping_is_recursion")

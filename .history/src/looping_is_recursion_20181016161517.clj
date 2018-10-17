@@ -34,20 +34,15 @@
 
 (defn find-first-index [pred a-seq]
   (loop [s a-seq
-         k 0]
+         k 0
+         p? pred]
     (if (empty? s) nil
-        (if (pred (first s))
-          k
-          (recur (rest s) (inc k))))))
+        (if (p? (first s)
+                k
+                (recur (rest s) (inc k) p?))))))
 
 (defn avg [a-seq]
-  (when-not (empty? a-seq)
-    (loop [idx 0
-           sum 0
-           crt-seq a-seq]
-      (cond
-        (empty? crt-seq) (/ sum idx)
-        :else (recur (inc idx) (+ sum (first crt-seq)) (rest crt-seq))))))
+  -1)
 
 (defn parity [a-seq]
   ":(")

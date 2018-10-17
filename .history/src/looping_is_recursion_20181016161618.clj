@@ -41,13 +41,7 @@
           (recur (rest s) (inc k))))))
 
 (defn avg [a-seq]
-  (when-not (empty? a-seq)
-    (loop [idx 0
-           sum 0
-           crt-seq a-seq]
-      (cond
-        (empty? crt-seq) (/ sum idx)
-        :else (recur (inc idx) (+ sum (first crt-seq)) (rest crt-seq))))))
+  -1)
 
 (defn parity [a-seq]
   ":(")
